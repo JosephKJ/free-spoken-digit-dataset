@@ -30,7 +30,7 @@ def wav_to_spectrogram(audio_path, save_path, spectrogram_dimensions=(64, 64), n
     fig.savefig(save_path, bbox_inches="tight", pad_inches=0)
 
 
-def dir_to_spectrogram(audio_dir, spectrogram_dir, spectrogram_dimensions=(64, 64), noverlap=16, cmap='gray_r'):
+def dir_to_spectrogram(audio_dir, spectrogram_dir, spectrogram_dimensions=(28, 28), noverlap=16, cmap='gray_r'):
     """ Creates spectrograms of all the audio files in a dir
 
     :param audio_dir: path of directory with audio files
@@ -50,6 +50,6 @@ def dir_to_spectrogram(audio_dir, spectrogram_dir, spectrogram_dimensions=(64, 6
 
 
 if __name__ == '__main__':
-    audio_dir = "/Users/Jackson/development/free-spoken-digit-dataset/recordings/"
-    spectrogram_dir = "/Users/Jackson/development/free-spoken-digit-dataset/spectrograms/"
+    audio_dir = "./recordings/"
+    spectrogram_dir = "./spectrograms/"
     dir_to_spectrogram(audio_dir, spectrogram_dir)
