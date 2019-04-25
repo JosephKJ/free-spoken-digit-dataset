@@ -27,7 +27,7 @@ def wav_to_spectrogram(audio_path, save_path, spectrogram_dimensions=(64, 64), n
     ax.specgram(samples, cmap=cmap, Fs=2, noverlap=noverlap)
     ax.xaxis.set_major_locator(plt.NullLocator())
     ax.yaxis.set_major_locator(plt.NullLocator())
-    fig.savefig(save_path, bbox_inches="tight", pad_inches=0)
+    fig.savefig(save_path, pad_inches=0)
 
 
 def dir_to_spectrogram(audio_dir, spectrogram_dir, spectrogram_dimensions=(28, 28), noverlap=16, cmap='gray_r'):
